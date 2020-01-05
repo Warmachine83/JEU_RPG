@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <title>JS RPG</title>
+</head>
+<body>
+    <h1>RPG Js</h1>
+    <div id="health">Health:</div>
+    <button>CH1</button>
+
+
+<script>
+class persoJoueur {
+    constructor(vie, pointVie, pointDeResistance, force, xp){
+        this.vie = vie;
+        this.pointVie = pointVie;
+        this.pointDeResistance = pointDeResistance;
+        this.force = force;
+        this.xp = xp;
+    }
+
+    get vieJoueur(){
+        return`Health: ${this.vie}/${this.pointVie}`
+    }
+
+}
+
+
+
+
+let health = document.getElementById('health');
+
+let paramJoueur = new persoJoueur(10, 10, 10, 10, 0);
+health.innerHTML = paramJoueur.vieJoueur;    
+
+
+
+
+
+</script>
+</body>
+</html>
