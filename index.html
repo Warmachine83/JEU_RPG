@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="script.js"></script>
     <title>JS RPG</title>
 </head>
 <body>
     <h1>RPG Js</h1>
     <div id="health">Health:</div>
-    <button>CH1</button>
+    <button id="degat" onclick="degat()">Dégats</button>
 
 
 <script>
@@ -31,13 +30,24 @@ class persoJoueur {
 
 
 
-
 let health = document.getElementById('health');
 
-let paramJoueur = new persoJoueur(10, 10, 10, 10, 0);
+let paramJoueur = new persoJoueur(3, 3, 10, 10, 0);
 health.innerHTML = paramJoueur.vieJoueur;    
 
 
+function degat(){
+
+    persoJoueur.vie = persoJoueur.vie-1;
+
+    let idvie = paramJoueur.vie;
+    
+    PVjoueur = idvie-1;
+    
+    
+    console.log(PVjoueur)
+    
+}
 
 
 
