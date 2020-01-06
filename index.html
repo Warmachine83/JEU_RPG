@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>JS RPG</title>
 </head>
 <body>
     <h1>RPG Js</h1>
     <div id="health">Health:</div>
     <button id="degat" onclick="degat()">Dégats</button>
+
+
+
+    <div id="scenario">
+        <div id="container">
+            <div class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat sequi animi, ea, minima tempora eveniet repellendus debitis temporibus, aut quod dignissimos? Voluptas placeat, velit fuga iusto similique maxime sed?</div>
+            <div id="choix">
+                <button>choix 1</button>
+                <button>Choix 2 </button>
+            </div>
+        </div>
+    </div>
 
 
 <script>
@@ -22,32 +35,43 @@ class persoJoueur {
         this.xp = xp;
     }
 
-    get vieJoueur(){
-        return`Health: ${this.vie}/${this.pointVie}`
-    }
 
 }
 
 
-
-let health = document.getElementById('health');
-
 let paramJoueur = new persoJoueur(3, 3, 10, 10, 0);
-health.innerHTML = paramJoueur.vieJoueur;    
+let idvie = paramJoueur.vie;   
+
 
 
 function degat(){
+    idvie = idvie-1;    
+    console.log(idvie)
+    health.innerHTML = 'Health: '+idvie+'/3';
 
-    persoJoueur.vie = persoJoueur.vie-1;
 
-    let idvie = paramJoueur.vie;
-    
-    PVjoueur = idvie-1;
-    
-    
-    console.log(PVjoueur)
+//génération des choix
+//element parents
+let Choix = document.getElementById('scenario')
+
+
+//Nouvel élément
+
+let newScenario = document.createElement('div')
+newScenario.textContent = 'test';
+
+Choix.appendChild(newScenario);
+
+
+    if (idvie === 0) {
+        alert('Vous êtes mort')
+    }
     
 }
+let health = document.getElementById('health');
+health.innerHTML = 'Health: '+idvie+'/3';
+
+
 
 
 
