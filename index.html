@@ -14,10 +14,10 @@
 
 
 
-    <div id="scenario">
-        <div id="container">
+    <div class="scenario">
+        <div class="container">
             <div class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat sequi animi, ea, minima tempora eveniet repellendus debitis temporibus, aut quod dignissimos? Voluptas placeat, velit fuga iusto similique maxime sed?</div>
-            <div id="choix">
+            <div class="choix">
                 <button>choix 1</button>
                 <button>Choix 2 </button>
             </div>
@@ -59,7 +59,16 @@ let Choix = document.getElementById('scenario')
 //Nouvel élément
 
 let newScenario = document.createElement('div')
+newScenario.setAttribute("class", "container")
+
+let buttonWrapper = document.createElement('div')
+newScenario.setAttribute("class", "choix")
+
+
 newScenario.textContent = 'test';
+
+//ajout des boutons
+
 
 Choix.appendChild(newScenario);
 

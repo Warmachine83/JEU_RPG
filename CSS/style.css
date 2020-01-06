@@ -1,4 +1,4 @@
-#container{
+.container{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -6,7 +6,7 @@
     margin-right: auto;
 }
 
-#choix{
+.choix{
     margin-left: auto;
     margin-right: auto;
 }
