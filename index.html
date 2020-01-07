@@ -14,7 +14,7 @@
 
 
 
-    <div class="scenario">
+    <div id="scenario">
         <div class="container">
             <div class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat sequi animi, ea, minima tempora eveniet repellendus debitis temporibus, aut quod dignissimos? Voluptas placeat, velit fuga iusto similique maxime sed?</div>
             <div class="choix">
@@ -64,19 +64,20 @@ newScenario.setAttribute("class", "container")
 let buttonWrapper = document.createElement('div')
 newScenario.setAttribute("class", "choix")
 
-
+newScenario
 newScenario.textContent = 'test';
-
-//ajout des boutons
-
-
 Choix.appendChild(newScenario);
 
+//ajout des boutons
+let newParent = document.getElementById('choix')
+newParent.document.createElement('button')
 
+
+/*
     if (idvie === 0) {
         alert('Vous êtes mort')
     }
-    
+*/  
 }
 let health = document.getElementById('health');
 health.innerHTML = 'Health: '+idvie+'/3';
