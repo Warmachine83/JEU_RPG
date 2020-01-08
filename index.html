@@ -52,25 +52,29 @@ function degat(){
 
 //génération des choix
 //element parents
-let Choix = document.getElementById('scenario')
-
-
+let scenario = document.getElementById('scenario');
 
 //Nouvel élément
 
-let newScenario = document.createElement('div')
-newScenario.setAttribute("class", "container")
 
-let buttonWrapper = document.createElement('div')
-newScenario.setAttribute("class", "choix")
 
-newScenario
-newScenario.textContent = 'test';
-Choix.appendChild(newScenario);
 
-//ajout des boutons
-let newParent = document.getElementById('choix')
-newParent.document.createElement('button')
+let divContainer = document.createElement('div');
+scenario.appendChild(divContainer).setAttribute('id', 'container');
+let container = document.getElementById('container');
+let divTxt = document.createElement('div');
+container.appendChild(divTxt).setAttribute('id', 'txt');
+container.appendChild(divTxt).setAttribute('id', 'choix')
+
+
+
+/*let container = document.getElementById('container');
+container.document.createElement('div').setAttribute('id', 'txt');
+container.document.createElement('div').setAttribute('id', 'choix');
+let choix = document.getElementById('choix');
+choix.document.createElement('button');
+choix.document.createElement('button');
+*/
 
 
 /*
